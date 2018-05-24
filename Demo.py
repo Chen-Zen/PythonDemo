@@ -223,7 +223,6 @@ print("width =", w, " height =", h, " area =", area(w, h))
 # 通过以下实例，你可以清楚了解Python函数变量的作用域：
 
 
-
 a = 4 # 全局变量
 
 
