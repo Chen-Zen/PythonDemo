@@ -192,3 +192,51 @@ while True:
     except StopIteration:
         sys.exit()
 '''
+
+# Python 函数
+# 函数的声明及调用
+
+'''
+def Say(n):
+    print(n)
+
+
+Say("w qu")
+
+
+def area(width, height):
+    return width * height
+
+
+def print_welcome(name):
+    print("Welcome", name)
+
+
+print_welcome("Fred")
+w = 4
+h = 5
+print("width =", w, " height =", h, " area =", area(w, h))
+'''
+
+# 函数变量作用域
+# 定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。
+# 通过以下实例，你可以清楚了解Python函数变量的作用域：
+
+
+
+a = 4 # 全局变量
+
+
+def print_func1():
+    # 局部变量
+    a = 17  
+    print("in print_func a = ", a)
+
+
+def print_func2():
+    print("in print_func a = ", a)
+
+
+print_func1()
+print_func2()
+print("a = ", a)
