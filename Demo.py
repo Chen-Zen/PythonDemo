@@ -123,7 +123,7 @@ for i in a:
 # break语句可以跳出for和while的循环体。如果你从for或while循环中终止，任何对应的循环else块将不执行。
 # continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
 # 循环语句可以有else子句;它在穷尽列表(以for循环)或条件变为假(以while循环)循环终止时被执行,但循环被break终止时不执行.如下查寻质数的循环例子:
-
+'''
 for n in range(2, 10):
     for x in range(2, n):
         if n % x == 0:
@@ -133,7 +133,35 @@ for n in range(2, 10):
         # 循环中没有找到元素
         print(n, "is a prime number")
 '''
-while True:
-    pass
+
+# 迭代器
+# 迭代器是一个可以记住遍历的位置的对象。
+# 迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结#束。迭代器只能往前不会后退。
+# 迭代器有两个基本的方法：iter() 和 next()。
+# 字符串，列表或元组对象都可用于创建迭代器：
 '''
-    
+list = [1, 2, 3, 4]
+it = iter(list)
+print(next(it))
+print(next(it))
+print(next(it))
+'''
+
+# 迭代器对象可以使用常规for语句进行遍历：
+'''
+list = [1, 2, 3, 4]
+it = iter(list)
+for x in it:
+    #print(x, end=" ")
+    print(x)
+'''
+#使用 next() 函数：
+import sys
+
+list=[1,2,3,4]
+it=iter(list)
+while True:
+    try:
+        print(next(it))
+    except StopIteration:
+        sys.exit()
