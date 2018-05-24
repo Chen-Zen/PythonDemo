@@ -155,7 +155,8 @@ for x in it:
     #print(x, end=" ")
     print(x)
 '''
-#使用 next() 函数：
+# 使用 next() 函数：
+'''
 import sys
 
 list=[1,2,3,4]
@@ -165,3 +166,29 @@ while True:
         print(next(it))
     except StopIteration:
         sys.exit()
+'''
+
+# 生成器
+'''
+import sys
+#生成器函数 - 斐波那契数列
+
+
+def fibonacci(n):
+    a, b, counter = 0, 1, 0
+    while True:
+        if (counter > n):
+            return
+        yield a
+        a, b = b, a+b
+        counter += 1
+
+# f是一个迭代器，由生成器返回生成
+f = fibonacci(10)
+
+while True:
+    try:
+        print(next(f), end=" ")
+    except StopIteration:
+        sys.exit()
+'''
